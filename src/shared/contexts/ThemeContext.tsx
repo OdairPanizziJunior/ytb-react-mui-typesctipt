@@ -6,7 +6,7 @@ import { Box } from '@mui/system';
 interface IThemeContextData {
     themeName: 'Light' | 'Dark';
     toogleTheme: () => void;
-}
+};
 
 const ThemeContext = createContext({} as IThemeContextData);
 
@@ -16,7 +16,7 @@ export const useAppThemeContext = () => {
 
 interface IAppThemeProviderProps {
     children: React.ReactNode;
-}
+};
 
 export const AppThemeProvider: React.FC<IAppThemeProviderProps> = ({ children }) => {
     const [themeName, setThemeName] = useState<'Light' | 'Dark'>('Light');
@@ -42,4 +42,4 @@ export const AppThemeProvider: React.FC<IAppThemeProviderProps> = ({ children })
             </ThemeProvider>
         </ThemeContext.Provider>
     );
-}
+};
